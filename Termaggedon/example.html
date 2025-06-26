@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Pretty Divs and Buttons Example</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      defer
+      src="https://shelbykauth.github.io/interview-tasks/termaggedon/non-blocking-popup.js"
+    ></script>
+    <style>
+      body {
+        background: #f7fafc;
+        font-family: "Segoe UI", Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+      }
+      .container {
+        max-width: 900px;
+        margin: 40px auto;
+        padding: 32px;
+        background: #fff;
+        border-radius: 18px;
+        box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
+        display: flex;
+        flex-wrap: wrap;
+        gap: 32px;
+        justify-content: center;
+      }
+      .pretty-div {
+        background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+        border-radius: 14px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.07);
+        padding: 28px 24px;
+        min-width: 220px;
+        max-width: 320px;
+        flex: 1 1 220px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 0 8px;
+      }
+      .pretty-div h2 {
+        margin: 0 0 12px 0;
+        font-size: 1.3rem;
+        color: #333;
+      }
+      .pretty-div p {
+        color: #555;
+        margin-bottom: 18px;
+        text-align: center;
+      }
+      button {
+        color: red;
+        padding: 10px 20px;
+        transition: background 0.2s, transform 0.2s;
+        transform: rotateZ(135deg);
+      }
+      button:hover {
+        transform: translateY(-2px) scale(1.04);
+      }
+      .pretty-btn {
+        background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+        color: #fff;
+        border: none;
+        border-radius: 8px;
+        padding: 10px 28px;
+        font-size: 1rem;
+        cursor: pointer;
+        transition: background 0.2s, transform 0.2s;
+        box-shadow: 0 2px 6px rgba(102, 126, 234, 0.15);
+      }
+      .pretty-btn:hover {
+        background: linear-gradient(90deg, #5a67d8 0%, #6b47b5 100%);
+        transform: translateY(-2px) scale(1.04);
+      }
+      .showcase {
+        margin: 40px auto 0 auto;
+        max-width: 60em;
+        background: #f0f4f8;
+        border-radius: 12px;
+        padding: 24px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+      }
+      .showcase h3 {
+        margin-top: 0;
+        color: #444;
+      }
+      .showcase pre {
+        background: #222;
+        color: #f8f8f2;
+        padding: 14px;
+        border-radius: 8px;
+        overflow-x: auto;
+        font-size: 0.95em;
+      }
+      footer {
+        background: linear-gradient(90deg, #e0e7ff 0%, #fceabb 100%);
+        padding: 32px 0 16px 0;
+        border-top: 1px solid #e2e8f0;
+        margin-top: 48px;
+      }
+      footer p {
+        margin: 0 0 18px 0;
+        color: #444;
+        font-size: 1.1em;
+        font-weight: 500;
+      }
+      .footer-links {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 18px 32px;
+        max-width: 900px;
+        margin: 0 auto;
+        padding: 0 16px;
+      }
+      .footer-links a {
+        color: #5a67d8;
+        text-decoration: none;
+        font-size: 1em;
+        padding: 6px 12px;
+        border-radius: 6px;
+        transition: background 0.2s, color 0.2s;
+        background: rgba(255, 255, 255, 0.4);
+      }
+      .footer-links a:hover {
+        background: #5a67d8;
+        color: #fff;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <button>
+        Buttons on this page are weird unless otherwise stated.
+        <br />
+        This is to showcase how the buttons in the external script are
+        unaffected.
+      </button>
+      <div class="pretty-div">
+        <h2>Welcome!</h2>
+        <p>
+          This is a beautiful example div. Click the button below to see some
+          magic.
+        </p>
+        <button
+          class="pretty-btn"
+          onclick="alert('Hello from the first button!')"
+        >
+          Click Me
+        </button>
+      </div>
+      <div class="pretty-div">
+        <h2>Another Div</h2>
+        <p>Buttons can do anything you want. Try this one for a surprise.</p>
+        <button
+          class="pretty-btn"
+          onclick="this.textContent='Clicked!'; this.disabled=true;"
+        >
+          Try Me
+        </button>
+      </div>
+      <div class="pretty-div">
+        <h2>Yet Another</h2>
+        <p>
+          Divs and buttons are easy to style and arrange. Enjoy experimenting!
+        </p>
+        <button
+          class="pretty-btn"
+          onclick="document.body.style.background='#ffe4ec'"
+        >
+          Change BG
+        </button>
+      </div>
+    </div>
+
+    <div class="showcase">
+      <h3>Script Showcase</h3>
+      <!-- Embed your script here -->
+      <pre>
+&lt;!-- Example embedded script --&gt;
+    &lt;script
+      defer
+      src="https://shelbykauth.github.io/interview-tasks/termaggedon/non-blocking-popup.js"
+    &gt;
+
+      </pre>
+      <!-- Example embedded script -->
+    </div>
+    <footer>
+      <p style="text-align: center; margin-top: 20px">
+        &copy; 2025 Shelby Kauth. All rights reserved.
+      </p>
+      <nav class="footer-links">
+        <a href="#">Link to make long footer</a>
+        <a href="#">Link to take up padding</a>
+        <a href="#">Link to make long footer</a>
+        <a href="#">Link to take up padding</a>
+        <a href="#">Link to take up padding</a>
+        <a href="#">Link to make long footer</a>
+        <a href="#">Link to take up padding</a>
+        <a href="#">Link to make long footer</a>
+        <a href="#">Link to take up padding</a>
+        <a href="#">Link to make long footer</a>
+        <a href="#">Link to take up padding</a>
+        <a href="#">Link to make long footer</a>
+        <a href="#">Link to take up padding</a>
+        <a href="#">Link to make long footer</a>
+        <a href="#">Link to take up padding</a>
+        <a href="#">Link to make long footer</a>
+        <a href="#">Link to take up padding</a>
+        <a href="#">Link to take up padding</a>
+        <a href="#">Link to make long footer</a>
+        <a href="#">Link to take up padding</a>
+        <a href="#">Link to make long footer</a>
+        <a href="#">Link to take up padding</a>
+        <a href="#">Link to make long footer</a>
+        <a href="#">Link to take up padding</a>
+        <a href="#">Link to make long footer</a>
+        <a href="#">Link to take up padding</a>
+      </nav>
+    </footer>
+  </body>
+</html>
