@@ -55,6 +55,9 @@
         z-index: 1000;
         pointer-events: auto;
         text-align: center;
+        font-family: Arial, sans-serif;
+        font-size: 16px;
+        color: black;
       }
       .hidden {
         display: none;
