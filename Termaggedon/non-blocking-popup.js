@@ -112,7 +112,7 @@
 
     shadow.appendChild(shadowStyle);
 
-    const mailtoLink = `<a _target="blank" rel="noopener" href='mailto:shelbykauth@gmail.com'>ShelbyKauth@gmail.com</a>`;
+    const mailtoLink = `<a target="_blank" rel="noopener" href='mailto:shelbykauth@gmail.com'>ShelbyKauth@gmail.com</a>`;
 
     const initialPopup = document.createElement("div");
     initialPopup.id = "non_blocking_popup";
