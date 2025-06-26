@@ -4,7 +4,7 @@
   "description": "Just a repo to store my interview tasks",
   "main": " ",
   "scripts": {
-    "start": "serve ./Termaggedon -p 3030",
+    "start": "serve ./docs/ -p 3030",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Shelby Kauth",
